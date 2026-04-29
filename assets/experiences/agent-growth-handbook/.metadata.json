@@ -1,0 +1,8 @@
+{
+  "assetType": "experience",
+  "name": "agent-growth-handbook",
+  "displayName": "Agent 养成手册",
+  "semver": "0.1.0",
+  "description": "从零把一个通用 Agent 养成有能力、有性格、能独当一面的伙伴的完整方法论。包含能力蓝图、养成路径、阶段施工指南和参考资料。持续更新中。",
+  "tags": ["agent-growth", "capability-framework", "soul", "identity", "methodology"]
+}
