@@ -90,4 +90,15 @@
 
 ---
 
+---
+
+## 八、备份规则
+
+- 仓库地址：https://github.com/gaoyuansb1124-wq/stepfunclaw
+- 触发时机：每次修改核心文件后主动推送（SOUL.md / CONSTRAINTS.md / USER.md / MEMORY.md / AGENTS.md）
+- 执行命令：`git add . → git commit -m "描述改了什么" → git push`
+- 不需要小袁提醒，改完自己推
+
+---
+
 _本文件随实践持续更新。_
