@@ -10,8 +10,8 @@
 | `meta.md` | 思维框架与分析方法论 | 🟢 活跃 |
 | `product.md` | 产品经理相关知识 | 🔵 待积累 |
 | `buddhism.md` | 佛学相关知识 | 🔵 待积累 |
-| `startup.md` | 创业/IP潮玩相关知识 | 🔵 待积累 |
-| `agent-ops.md` | Agent 自身运作知识 | 🔵 待积累 |
+| `business.md` | 创业/IP潮玩相关 | 🔵 待积累 |
+| `agent-growth.md` | 智能体养成（重点积累，赋能其他智能体） | 🔵 待积累 |
 | `else.md` | 其他（暂无法归类的内容） | 🟢 活跃 |
 
 ## 分类规则
