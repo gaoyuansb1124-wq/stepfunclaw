@@ -1,0 +1,8 @@
+{
+  "assetType": "experience",
+  "name": "agent-os-design",
+  "displayName": "Agent 底层操作系统设计思想",
+  "semver": "1.0.0",
+  "description": "从零搭建 AI Agent 底层操作系统的设计思想：身份层、规则层、记忆与知识层、资产层四层架构。不讲目录结构，讲背后的设计理念——为什么这样分层、每层解决什么问题、怎么演化。",
+  "tags": ["agent-architecture", "soul", "constraints", "memory", "knowledge-base", "design-thinking"]
+}
