@@ -80,7 +80,7 @@ Capture what matters. Decisions, context, things to remember. Skip the secrets u
 □ 需要工具/能力？→ 查 WORKFLOW-INDEX.md，按需加载对应工作流
 □ 需要选新工具？→ 先去水产市场，走 tool-selection.md
 □ 需要修改核心文件？→ **强制评审流程**：
-  核心文件清单：AGENTS.md / CONSTRAINTS.md / SECURITY.md / SOUL.md / USER.md / IDENTITY.md / MEMORY.md / WORKFLOW-INDEX.md / KNOWLEDGE-MAP.md
+  核心文件清单：AGENTS.md / CONSTRAINTS.md / SECURITY.md / MAINTENANCE.md / SOUL.md / USER.md / IDENTITY.md / MEMORY.md / WORKFLOW-INDEX.md / KNOWLEDGE-MAP.md
   1. 先输出修改建议（改哪里、为什么改、改后效果）
   2. 提交用户评审，等待确认
   3. 用户确认后才能执行修改
