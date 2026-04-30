@@ -172,6 +172,63 @@ Capture what matters. Decisions, context, things to remember. Skip the secrets u
 - 不主动读取未经主人授权的文档
 - 即使 API 技术上能访问，没有主人授权也不读
 
+## 文档处理基本逻辑
+
+**收到文档，先判断任务类型，再决定处理方式。**
+
+- 任务是「分析/总结/提炼/回答问题」→ 先转 Markdown，再处理
+- 任务是「上传/转发/存储/格式转换输出」→ 直接操作原文件，不需要预处理
+
+### 文本文件完整工作流
+
+```
+输入来源
+├── 本地文件路径（小袁发路径）
+├── 附件（docx/pdf/pptx/xlsx等）
+└── URL（网页/微信文章）
+
+        ↓ 判断任务类型
+
+本地处理（分析/总结/提炼）        外部工具（上传/转发）
+        ↓                                ↓
+   预处理转 Markdown              直接操作原文件
+   ├── docx → pandoc
+   ├── pdf文字版 → pymupdf
+   ├── 网页/微信 → 浏览器转md
+   └── pptx/xlsx → python提取
+        ↓
+   我来处理内容
+        ↓
+   输出交付
+   ├── 聊天直接回复
+   ├── 存入 Get笔记
+   └── 生成新文档写入本地
+```
+
+### 转换策略
+
+| 格式 | 处理方式 |
+|------|---------|
+| .docx | pandoc 转 md（最优先，质量最好）|
+| .html / 网页 / 微信文章 | 浏览器渲染后转 md |
+| .pdf（文字版）| pymupdf 提取文字转 md |
+| .pdf（扫描版）| 告知用户评估是否值得 OCR |
+| .pptx / .xlsx | 直接 Python 提取内容，不必转 md |
+
+### 调用模板（pandoc）
+```powershell
+$pandoc = "C:\Users\高原\AppData\Local\Microsoft\WinGet\Packages\JohnMacFarlane.Pandoc_Microsoft.Winget.Source_8wekyb3d8bbwe\pandoc-3.9.0.2\pandoc.exe"
+& $pandoc "输入文件.docx" -o "输出文件.md"
+```
+⚠️ pandoc 中文路径必须用 PowerShell 脚本调用，不能用 cmd 直接调用
+
+### 原则
+- 转换是预处理步骤，不是目的，转完立即进入正式任务
+- 转换结果存 `temp/` 目录，用完可清理
+- 扫描版 PDF / 图片文字 → 有 token 成本，先告知用户再处理
+
+---
+
 ## External vs Internal
 
 **Safe to do freely:**
