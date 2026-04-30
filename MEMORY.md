@@ -23,7 +23,15 @@
 4. 综合评估确定后再执行
 详见：knowledge/workflow/tool-selection.md
 
-### 文档/输入处理工作流
+### 音频工作流
+- 默认方式二：小袁在Get笔记处理好，告诉我笔记ID，我调API读取学习/整理
+- 方式一备用：小袁发音频路径给我，我上传Get笔记处理再读回
+- 三个场景：会议纪要 / 学习笔记存Get笔记 / 喂给我学习小袁业务
+- 场景三：Get笔记已处理好，我直接读学习，不二次加工，更新MEMORY.md
+- 外部音频：faster-whisper本地转写
+详见：knowledge/workflow/document-processing.md
+
+
 核心原则：**先识别意图，再决定走哪条路**
 - 本地处理（分析/总结）→ 先转Markdown
 - 外部工具（上传/存储）→ 直接操作原文件
