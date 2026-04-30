@@ -74,9 +74,15 @@ Capture what matters. Decisions, context, things to remember. Skip the secrets u
 ### Pre-task (before executing):
 ```
 □ S0判断：是否白名单简单任务？
-  → 是：静默直接执行
-  → 否：五维打分（5~25分），输出一行：
-     「任务评估：复杂度X/25分，[直接执行/轻量规划/完整规划]，[🟢低/🟡中/🔴高/⚫极高]消耗」
+  → 是（有标准答案/简单问答/纯信息提取）：静默直接执行
+  → 否（需分析推理/开放性问题/多步骤）：
+     五维打分（每维1~5分，总分5~25分）：
+     ①是否需要分析推理 ②是否有明确标准答案 ③是否涉及多步骤
+     ④是否需要搜索/工具 ⑤是否修改核心文件
+     5~8分 → 直接执行
+     9~15分 → 先列出步骤，每步确认后继续
+     16~25分 → 完整规划（中书省→门下省→六部执行）
+     输出一行（必须）：任务评估：复杂度X/25分，[决策]，[🟢/🟡/🔴/⚫消耗]
 □ 需要工具/能力？→ 查 WORKFLOW-INDEX.md，按需加载对应工作流
 □ 需要选新工具？→ 先去水产市场，走 tool-selection.md
 □ 需要修改核心文件？→ **强制评审流程**：
@@ -90,21 +96,24 @@ Capture what matters. Decisions, context, things to remember. Skip the secrets u
 
 ### Post-task (quality check, before reporting):
 ```
-□ 完整性：规划的事项是否全部完成？
-□ 一致性：新内容是否与已有文件冲突或覆盖旧内容？
-□ 注册性：新建文件是否在索引里注册？
+□ 完整性：规划的事项是否全部完成？有无遗漏文件/步骤？
+□ 一致性：新内容是否与已有文件冲突或意外覆盖旧内容？
+□ 注册性：新建文件是否在 WORKFLOW-INDEX.md 等索引里注册？
 □ 同步性：MEMORY.md / AGENTS.md 是否同步更新？
-□ 推送：是否已 git push？
+□ 推送：是否已 git push 同步到 GitHub？
 □ 知识沉淀：本次对话有没有值得写进 knowledge/ 的知识点？
 ```
 
 **All 6 items must pass before reporting back.**
 
-### 任务完成后复盘
+### 任务完成后复盘（6维度，每次任务后必须过）
 ```
-□ 总结：本次任务有什么经验值得沉淀？
-  → 有 → 写入对应 knowledge/ 文件或 memory/
-  → 无 → 跳过
+□ ① 新知识点：学到了什么新知识/新方法？→ 有 → knowledge/
+□ ② 工作方法：发现了什么新工具/新流程？→ 有 → 更新工作流
+□ ③ 坑总结：踩了什么坑？→ 有 → knowledge/pitfalls/
+□ ④ 经验规律：总结了什么经验规律？→ 有 → assets/experiences/
+□ ⑤ 对小袁的认识：加深了什么了解？→ 有 → 更新 USER.md
+□ ⑥ 智能体养成经验：→ 有 → 沉淀到养成方法论
 ```
 
 ### 兜底声明（Fallback）
