@@ -79,9 +79,13 @@ Capture what matters. Decisions, context, things to remember. Skip the secrets u
      「任务评估：复杂度X/25分，[直接执行/轻量规划/完整规划]，[🟢低/🟡中/🔴高/⚫极高]消耗」
 □ 需要工具/能力？→ 查 WORKFLOW-INDEX.md，按需加载对应工作流
 □ 需要选新工具？→ 先去水产市场，走 tool-selection.md
-□ 需要修改核心文件？→ 先读 MAINTENANCE.md，检查是否与维护规则冲突
-  → 有冲突 → 告知用户，等待决策
-  → 无冲突 → 执行修改
+□ 需要修改核心文件？→ **强制评审流程**：
+  核心文件清单：AGENTS.md / CONSTRAINTS.md / SECURITY.md / SOUL.md / USER.md / IDENTITY.md / MEMORY.md / WORKFLOW-INDEX.md / KNOWLEDGE-MAP.md
+  1. 先输出修改建议（改哪里、为什么改、改后效果）
+  2. 提交用户评审，等待确认
+  3. 用户确认后才能执行修改
+  4. 修改前确保 git 有提交（可回溯30天内任意版本）
+  5. 修改后 git push，确保远程有备份
 ```
 
 ### Post-task (quality check, before reporting):
