@@ -9,7 +9,8 @@
 
 | 触发条件 | 工作流文件 | 说明 |
 |---------|----------|------|
-| 收到文档/图片/音频处理请求 | `knowledge/workflow/document-processing.md` | 文本/图片/音频四大输入类型处理 |
+| 收到音频/录音处理请求 | `knowledge/workflow/audio-processing.md` | 会议纪要/学习笔记/喂给我学习三大场景 |
+| 收到文档/图片处理请求 | `knowledge/workflow/document-processing.md` | 文本/图片输入类型处理 |
 | 收到视频处理请求 | `knowledge/workflow/video-processing.md` | 视频四大场景处理 |
 | 需要选择工具/能力 | `knowledge/workflow/tool-selection.md` | 工具选择方法论，先去水产市场 |
 | 调用 Get笔记 API | `skills/getnote/references/api-details.md` | 正确字段名和接口规范 |

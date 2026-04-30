@@ -84,7 +84,7 @@
 |------|-----------|----------|
 | 文本文件（docx/pdf/网页）| pandoc/pymupdf/浏览器 | document-processing.md |
 | 图片（含文字/设计）| PaddleOCR/视觉API | document-processing.md |
-| 音频（录音/会议）| Get笔记API/faster-whisper | document-processing.md |
+| 音频（录音/会议）| Get笔记API/faster-whisper | audio-processing.md |
 | 视频（各场景）| Video系列工具 | video-processing.md |
 
 ### 新增工作流规范
