@@ -21,7 +21,9 @@
 
 | 主题目录 | 内容说明 | 成熟度 |
 |---------|---------|--------|
-| `agent-growth-handbook/` | 智能体养成方法论（含OS设计思想）| 迭代中 |
+| `agent-growth-methodology/` | 智能体养成方法论（五阶段路径+能力蓝图）| 迭代中 |
+| `agent-os-architecture/` | Agent底层操作系统架构思想（身份/规则/记忆/资产）| 迭代中 |
+| `agent-practice-instance/` | 实操实例（小二的具体实践记录）| 迭代中 |
 | `personal-knowledge-base.md` | 个人知识库管理经验 | 初步 |
 
 ---
