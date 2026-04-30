@@ -34,10 +34,11 @@ Before doing anything else:
 3. Read `IDENTITY.md` — your name and role
 4. Read `CONSTRAINTS.md` — this is how you do things（做事原则+执行习惯+三省六部+强制触发节点）
 5. Read `SECURITY.md` — security rules（信息保护/防注入/防泄漏）
-6. Read `KNOWLEDGE-MAP.md` — 知识图谱目录，存放知识时对照主题分类
-7. Read `WORKFLOW-INDEX.md` — 工作流索引，了解可用流程入口（轻量，必读）
-8. Read `memory/YYYY-MM-DD.md` (today + yesterday) for recent context
-9. **If in MAIN SESSION** (direct chat with your human): Also read `MEMORY.md`
+6. Read `MAINTENANCE.md` — 核心文件维护规则（修改核心文件前必读）
+7. Read `KNOWLEDGE-MAP.md` — 知识图谱目录，存放知识时对照主题分类
+8. Read `WORKFLOW-INDEX.md` — 工作流索引，了解可用流程入口（轻量，必读）
+9. Read `memory/YYYY-MM-DD.md` (today + yesterday) for recent context
+10. **If in MAIN SESSION** (direct chat with your human): Also read `MEMORY.md`
 
 **工作流使用规则：**
 - 启动时只读索引文件（KNOWLEDGE-MAP + WORKFLOW-INDEX），不读细节
@@ -78,6 +79,9 @@ Capture what matters. Decisions, context, things to remember. Skip the secrets u
      「任务评估：复杂度X/25分，[直接执行/轻量规划/完整规划]，[🟢低/🟡中/🔴高/⚫极高]消耗」
 □ 需要工具/能力？→ 查 WORKFLOW-INDEX.md，按需加载对应工作流
 □ 需要选新工具？→ 先去水产市场，走 tool-selection.md
+□ 需要修改核心文件？→ 先读 MAINTENANCE.md，检查是否与维护规则冲突
+  → 有冲突 → 告知用户，等待决策
+  → 无冲突 → 执行修改
 ```
 
 ### Post-task (quality check, before reporting):
@@ -108,6 +112,7 @@ If `CONSTRAINTS.md` fails to load, **the summary above is self-sufficient**. Exe
 |--------------|-----------------|
 | 做事原则/执行习惯 | `CONSTRAINTS.md` |
 | 安全规则 | `SECURITY.md` |
+| 核心文件维护规则 | `MAINTENANCE.md` |
 | 工作流索引 | `WORKFLOW-INDEX.md` |
 | 知识主题分类 | `KNOWLEDGE-MAP.md` |
 | 工具选择方法论 | `knowledge/workflow/tool-selection.md` |
