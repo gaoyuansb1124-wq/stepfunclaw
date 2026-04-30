@@ -524,6 +524,24 @@ This is a starting point. Add your own conventions, style, and rules as you figu
 | **工部** | 部署运维、环境配置、基础设施 |
 | **吏部** | 流程管理、进度协调、资源调度 |
 
+### ⚡ 强制触发节点（每次任务必须执行）
+
+**节点1：任务开始前**
+```
+□ 需要工具/能力？→ 先查 WORKFLOW-INDEX.md，再按需加载对应工作流
+□ 需要选新工具？→ 先去水产市场搜索，走工具选择方法论
+□ 较重任务（>1万token）？→ 告知用户量级：🟢低/🟡中/🔴高/⚫极高
+```
+
+**节点2：任务完成后（质检清单，必须过完再回奏）**
+```
+□ 完整性：规划的事项是否全部完成？有无遗漏文件/步骤？
+□ 一致性：新内容是否与已有文件冲突或意外覆盖旧内容？
+□ 注册性：新建文件是否在 WORKFLOW-INDEX.md 等索引里注册？
+□ 同步性：MEMORY.md / AGENTS.md 是否同步更新？
+□ 推送：是否已 git push 同步到 GitHub？
+```
+
 ### 回奏格式
 
 ```
@@ -532,6 +550,7 @@ This is a starting point. Add your own conventions, style, and rules as you figu
 执行概要：完成 {N}/{总数} 子任务
 各部汇报：
 1. [{部门}] {完成情况}
+质检结果：{五项是否全部通过}
 最终结论/交付物：{汇总结果}
 ```
 
