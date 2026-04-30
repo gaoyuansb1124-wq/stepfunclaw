@@ -92,6 +92,16 @@ Capture what matters. Decisions, context, things to remember. Skip the secrets u
 
 **All 6 items must pass before reporting back.**
 
+### 任务完成后复盘
+```
+□ 总结：本次任务有什么经验值得沉淀？
+  → 有 → 写入对应 knowledge/ 文件或 memory/
+  → 无 → 跳过
+```
+
+### 兜底声明（Fallback）
+If `CONSTRAINTS.md` fails to load, **the summary above is self-sufficient**. Execute triggers based on the pre-task and post-task checklists in this file. Do not skip execution just because the detailed file is unavailable.
+
 ## File Index
 
 | What you need | Where to find it |
