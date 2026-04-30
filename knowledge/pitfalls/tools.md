@@ -10,61 +10,72 @@
 
 **正确做法：** 写成 .ps1 脚本文件再执行
 ```powershell
-# 写入脚本
 write("temp/script.ps1", 脚本内容)
-# 执行
 powershell -ExecutionPolicy Bypass -File "temp/script.ps1"
 ```
 
 ---
 
-## PIT-202 | cmd 中 && 操作符报错
+## PIT-202 | cmd 中 && 操作符在 PowerShell 里报错
 
-**现象：** PowerShell 中执行 `cmd /c "xxx && yyy"` 报"不是有效语句分隔符"
-
-**根本原因：** PowerShell 本身不支持 `&&`，需要用 `cmd /c` 包裹，或改用 `;`
+**现象：** PowerShell 中直接用 `&&` 报"不是有效语句分隔符"
 
 **正确做法：**
 ```powershell
-# 方式一：cmd 包裹
+# 用 cmd /c 包裹
 cmd /c "command1 && command2"
-
-# 方式二：PowerShell 分号
-command1; command2
-
-# 方式三：写脚本文件
+# 或写脚本文件
 ```
 
 ---
 
 ## PIT-203 | Python 不在默认 PATH，找不到模块
 
-**现象：** `python -m pip install xxx` 成功，但 `python script.py` 报 ModuleNotFoundError
+**现象：** pip install 成功，但执行脚本报 ModuleNotFoundError
 
-**根本原因：** 系统有多个 Python，pip 装到了一个，执行用的是另一个
+**根本原因：** 系统有多个 Python，pip 和执行用的不是同一个
 
-**正确做法：** 用完整路径指定 Python
+**正确做法：** 用完整路径
 ```
 D:\99软件安装\python\python.exe script.py
 D:\99软件安装\python\python.exe -m pip install xxx
 ```
-
 **本机 Python 路径：** `D:\99软件安装\python\python.exe`
 
 ---
 
-## PIT-204 | pandoc 未安装，文档转换失败
+## PIT-204 | pandoc 中文路径在 cmd 里报错
 
-**现象：** 执行 `pandoc` 报"不是内部或外部命令"
+**现象：** pandoc 处理中文路径文件时报 invalid argument
 
-**根本原因：** 系统未安装 pandoc
-
-**临时解法：** 用 python-docx 脚本读取 .docx 内容
-```python
-from docx import Document
-doc = Document('file.docx')
-for p in doc.paragraphs:
-    print(p.text)
+**正确做法：** 用 PowerShell 脚本调用
+```powershell
+$pandoc = "C:\Users\高原\AppData\Local\Microsoft\WinGet\Packages\JohnMacFarlane.Pandoc_Microsoft.Winget.Source_8wekyb3d8bbwe\pandoc-3.9.0.2\pandoc.exe"
+& $pandoc "输入文件.docx" -o "输出文件.md"
 ```
 
-**待办：** 安装 pandoc（https://pandoc.org/installing.html）一劳永逸
+---
+
+## PIT-301 | 习惯性用默认工具，没有先找最优工具
+
+**现象：** 遇到需要某种能力时，直接用脑子里第一个想到的方案（如 tesseract、自己写脚本），没有系统性地寻找最优工具
+
+**案例：**
+- 需要 OCR 能力 → 直接建议装 tesseract
+- 没有先去水产市场搜索，结果发现有 PaddleOCR（中文更强）、多模态处理器（覆盖更广）等更优方案
+
+**根本原因：** 跳过了"选工具"步骤，凭习惯和第一反应做决定
+
+**正确做法：**
+```
+1. 理解问题，定义解决步骤
+2. 去工具池找工具
+   优先级：水产市场 → 已安装skills → 系统工具 → 自己实现
+3. 评估候选工具
+   ├── 效能：质量、覆盖场景、社区使用量
+   ├── 成本：API费用/token/安装复杂度
+   └── 风险：稳定性/维护状态/隐私
+4. 综合评估后确定，再执行
+```
+
+**记住：** 水产市场是工具池，需要某种能力时第一步先去搜索，不要凭习惯选工具。
