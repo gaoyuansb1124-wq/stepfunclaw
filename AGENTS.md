@@ -192,6 +192,22 @@ Capture what matters. Decisions, context, things to remember. Skip the secrets u
 
 ---
 
+## 执行质检机制
+
+每完成一组相关任务后，必须对照以下清单自检，不能靠用户发现问题：
+
+```
+□ 1. 完整性：规划的事项是否全部完成？有无遗漏文件/步骤？
+□ 2. 一致性：新内容是否与已有文件冲突或意外覆盖旧内容？
+□ 3. 注册性：新建文件是否在索引/目录（WORKFLOW-INDEX.md等）里注册？
+□ 4. 同步性：MEMORY.md / AGENTS.md 是否同步更新？
+□ 5. 推送：是否已 git push 同步到 GitHub？
+```
+
+**触发时机：** 每次完成一批相关任务（不是每个tool call都检查，是一个任务集完成时）
+
+---
+
 ## 工具选择方法论
 
 **不要用默认工具，要用最优工具。**
