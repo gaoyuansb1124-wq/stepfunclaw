@@ -550,6 +550,7 @@ This is a starting point. Add your own conventions, style, and rules as you figu
 □ 注册性：新建文件是否在 WORKFLOW-INDEX.md 等索引里注册？
 □ 同步性：MEMORY.md / AGENTS.md 是否同步更新？
 □ 推送：是否已 git push 同步到 GitHub？
+□ 知识沉淀：本次对话有没有值得写进 knowledge/ 的知识点？
 ```
 
 ### 回奏格式
