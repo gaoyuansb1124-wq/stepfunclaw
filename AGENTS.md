@@ -242,6 +242,25 @@ $pandoc = "C:\Users\高原\AppData\Local\Microsoft\WinGet\Packages\JohnMacFarlan
 - 转换结果存 `temp/` 目录，用完可清理
 - 扫描版 PDF / 图片文字 → 有 token 成本，先告知用户再处理
 
+### 图片工作流
+
+```
+图片输入 → 判断场景
+
+场景A（含文字，需提取）          场景B（设计/画面，需理解）
+    ↓                                   ↓
+OCR提取                          阶跃星辰视觉API
+├── 图片 → PaddleOCR             └── 输出描述/方案
+├── PDF → PDF to Markdown skill
+└── 效果不佳 → 升级视觉API
+    ↓
+提取出文字 → 再判断意图
+├── 仅需结果 → 直接回复/存储，结束
+└── 需进一步处理 → 接入文本处理工作流
+```
+
+> 详见 knowledge/workflow/document-processing.md
+
 ---
 
 ## External vs Internal
