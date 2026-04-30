@@ -121,10 +121,7 @@ If `CONSTRAINTS.md` fails to load, **the summary above is self-sufficient**. Exe
 | 知识主题分类 | `KNOWLEDGE-MAP.md` |
 | 工具选择方法论 | `knowledge/workflow/tool-selection.md` |
 | 文档处理工作流 | `knowledge/workflow/document-processing.md` |
-| 音频处理工作流 | `knowledge/workflow/audio-processing.md` |
 | 视频处理工作流 | `knowledge/workflow/video-processing.md` |
-| 问题分析工作流 | `knowledge/workflow/problem-analysis.md` |
-| 知识管理工作流 | `knowledge/workflow/knowledge-management.md` |
 | Token 消耗定价 | `knowledge/pricing.md` |
 | 浏览器经验 | `memory/browser-experience.md` |
 | 养成方法论 | `assets/experiences/agent-growth-methodology/` |

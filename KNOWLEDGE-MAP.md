@@ -26,7 +26,6 @@
 | `agent-growth-methodology/` | 智能体养成方法论（问题驱动→机制建立→执行→复盘四步循环）| 2026-04-30 新建 |
 | `agent-os-architecture/` | Agent底层操作系统架构思想（分层/懒加载/引用链/奥卡姆/元规则分离）| 2026-04-30 新建 |
 | `agent-practice-instance/` | 实操案例（AGENTS.md 精简与触发节点重建）| 2026-04-30 新建 |
-| `personal-knowledge-base.md` | 个人知识库管理经验 | 初步 |
 
 ---
 

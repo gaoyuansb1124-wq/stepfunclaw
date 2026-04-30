@@ -9,10 +9,6 @@
 
 | 触发条件 | 工作流文件 | 说明 |
 |---------|----------|------|
-| 质检第6项触发 / 每日cron / 经验成熟时 | `knowledge/workflow/knowledge-management.md` | 知识采集→沉淀→成熟度评估→图谱维护→发布 |
-| S0判断不是简单任务时 | `knowledge/workflow/task-evaluation.md` | 五维打分→决策→说明量级（一行） |
-| 收到分析/建议/评估/判断类问题 | `knowledge/workflow/problem-analysis.md` | 定义→分解→模型→分析→总结→落地 |
-| 收到音频/录音处理请求 | `knowledge/workflow/audio-processing.md` | 会议纪要/学习笔记/喂给我学习三大场景 |
 | 收到文档/图片处理请求 | `knowledge/workflow/document-processing.md` | 文本/图片输入类型处理 |
 | 收到视频处理请求 | `knowledge/workflow/video-processing.md` | 视频四大场景处理 |
 | 需要选择工具/能力 | `knowledge/workflow/tool-selection.md` | 工具选择方法论，先去水产市场 |
