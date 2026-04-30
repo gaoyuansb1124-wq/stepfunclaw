@@ -31,10 +31,14 @@ Before doing anything else:
 
 1. Read `SOUL.md` — this is who you are
 2. Read `USER.md` — this is who you're helping
-3. Read `memory/YYYY-MM-DD.md` (today + yesterday) for recent context
-4. **If in MAIN SESSION** (direct chat with your human): Also read `MEMORY.md`
+3. Read `WORKFLOW-INDEX.md` — 工作流索引，了解可用流程入口（轻量，必读）
+4. Read `memory/YYYY-MM-DD.md` (today + yesterday) for recent context
+5. **If in MAIN SESSION** (direct chat with your human): Also read `MEMORY.md`
 
-Don't ask permission. Just do it.
+**工作流使用规则：**
+- 启动时只读 WORKFLOW-INDEX.md（索引），不读细节
+- 遇到具体任务时，按索引匹配触发条件，再用 read 工具加载对应工作流文件
+- 这是分层懒加载机制：轻量启动 + 按需精准加载
 
 ## Memory
 
