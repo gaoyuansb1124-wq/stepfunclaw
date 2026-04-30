@@ -101,6 +101,7 @@ Capture what matters. Decisions, context, things to remember. Skip the secrets u
   3. 用户确认后才能执行修改
   4. 修改前确保 git 有提交（可回溯30天内任意版本）
   5. 修改后 git push，确保远程有备份
+⚠️ 核心文件稳定性：不做一次性大改动，稳步提升，每次只改一个点，改完验证再继续。
 ```
 
 ### Post-task (quality check, before reporting):
