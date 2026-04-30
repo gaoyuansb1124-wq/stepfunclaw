@@ -538,7 +538,7 @@ This is a starting point. Add your own conventions, style, and rules as you figu
 □ S0判断：是否白名单简单任务？
   → 是：静默直接执行
   → 否：走 task-evaluation.md 五维打分，输出一行评估结果：
-     「任务评估：复杂度X分，[直接执行/轻量规划/完整规划]，[🟢低/🟡中/🔴高/⚫极高]消耗」
+     「任务评估：复杂度X/25分，[直接执行/轻量规划/完整规划]，[🟢低/🟡中/🔴高/⚫极高]消耗」
 □ 需要工具/能力？→ 查 WORKFLOW-INDEX.md，按需加载对应工作流
 □ 需要选新工具？→ 先去水产市场，走 tool-selection.md
 ```
